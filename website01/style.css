@@ -350,6 +350,7 @@ main .section-3 {
   border: 30px green;
   border-style: groove;
   background-color: transparent;
+  backdrop-filter: contrast(80%);
 }
 
 
@@ -373,6 +374,7 @@ main .section-3 {
   padding: 100px 50px;
   border: 30px green;
   border-style: groove;
+  backdrop-filter: contrast(80%);
 }
 
 .section-3 .content-container .soft-skills h2 {
