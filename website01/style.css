@@ -1,0 +1,455 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(70,70,70);
+  padding: 0 30px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  opacity: .8;
+}
+
+header .title-container {
+  height: 100%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .title-container img {
+  width: 100%;
+}
+
+header .icon-container {
+  display: none;
+  height: 100%;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+header .icon-container i {
+  font-size: 1.5em;
+  color: white;
+}
+
+header .navigation-container {
+  height: 100%;
+  width: auto;
+}
+
+header .navigation-container nav {
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .navigation-container nav a {
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  border-width: .5px;
+  border-color: transparent;
+  border-style: groove;
+  transition: .5s ease;
+}
+
+header .navigation-container nav a:hover {
+  border-color: white;
+}
+
+header .navigation-container nav a:active {
+  border-color: crimson;
+  color: crimson;
+}
+
+
+main .section-1 {
+  /* background-image: url('background01.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  position: static;
+  background-color: rgb(70,70,70);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+main .section-1 .img-container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  left: 140px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+main .section-1 .img-container img {
+  width: 100%;
+}
+
+
+main .section-1 .text-container {
+  text-align: center;
+  line-height: 70px;
+  z-index: 2;
+}
+
+
+main .section-1 .text-container h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+}
+
+main .section-1 .text-container h1 span {
+  animation: changecolor 4s ease infinite;
+}
+
+@keyframes changecolor {
+  0% {
+    color: red;
+  }
+  40% {
+    color: green;
+  }
+  80% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
+
+
+.wrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.wrapper .static-text {
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.dynamic-text-container {
+  overflow: hidden;
+}
+
+.wrapper .dynamic-text {
+  margin-left: 15px;
+  height: 40px;
+  line-height: 60px;
+  position: relative;
+  top: 0;
+  animation: sliding 6s steps(3) infinite;
+}
+
+.wrapper .dynamic-text li {
+  color: crimson;
+  list-style: none;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: start;
+}
+
+@keyframes sliding {
+  100% {
+    top: -180px;
+  }
+}
+
+.wrapper .dynamic-text li span {
+  position: relative;
+  top: 5px;
+  padding-right: 10px;
+}
+
+.wrapper .dynamic-text li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  background-color: rgb(70,70,70);
+  border-left: 2px solid crimson;
+  animation: typing 2s ease-out infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* About section styling */
+
+
+main .section-2 {
+  height: 100vh;
+  min-height: 100vh;
+  background-color: white;
+  width: 100%;
+  position: static;
+  left: 0;
+  right: 0;
+}
+
+.section-2 h1 {
+/*   background-color: aqua; */
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: rgb(70,70,70);
+}
+
+.section-2 .content-container {
+  height: 80%;
+  display: flex;
+}
+
+.section-2 .content-container .img-container {
+  width: 40%;
+/*   background-color: crimson; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-2 .content-container .img-container img{
+  width: 90%;
+  background-image: url('background01.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 50px;
+  user-select: none;
+}
+
+.section-2 .content-container .text-link-container {
+/*   background-color: yellowgreen; */
+  width: 60%;
+  height: 100%;
+}
+
+.section-2 .content-container .text-link-container .text-container {
+  height: 100%;
+/*   background-color: blueviolet; */
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.section-2 .content-container .text-link-container .text-container p {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(70,70,70);
+  user-select: none;
+}
+
+.section-2 .content-container .text-link-container .text-container p span {
+  color: green;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+/* Skills section styling */
+
+main .section-3 {
+  display: block;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: rgb(70,70,70);
+}
+
+.section-3 h1 {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+}
+
+.section-3 .content-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  color: white;
+  background-image: url('background01.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.section-3 .content-container .tech-skills {
+  width: 50%;
+  padding: 100px 50px;
+  border: 30px green;
+  border-style: groove;
+  background-color: transparent;
+}
+
+
+.section-3 .content-container .tech-skills h2 {
+  text-align: center;
+  color: white;
+}
+
+.section-3 .content-container .tech-skills ul {
+  list-style: circle;
+  margin-top: 20px;
+}
+
+.section-3 .content-container .tech-skills ul li {
+  font-size: 20px;
+  color: white;
+}
+
+.section-3 .content-container .soft-skills {
+  width: 50%;
+  padding: 100px 50px;
+  border: 30px green;
+  border-style: groove;
+}
+
+.section-3 .content-container .soft-skills h2 {
+  text-align: center;
+  color: white;
+}
+
+.section-3 .content-container .soft-skills ul {
+  list-style: circle;
+  margin-top: 20px;
+}
+
+.section-3 .content-container .soft-skills ul li {
+  font-size: 20px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+  header {
+    padding: 0 25px;
+  }
+  header .navigation-container nav a {
+    padding: 0 14px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    padding: 0 20px;
+  }
+  header .navigation-container nav a {
+    padding: 0 13px;
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 0 15px;
+  }
+  header .navigation-container nav a {
+    padding: 0 12px;
+    font-size: .8em;
+  }
+}
+
+
+@media (max-width: 550px) {
+  header {
+    padding: 0 10px;
+  }
+  header .navigation-container {
+    display: none;
+  }
+  header .icon-container {
+    display: flex;
+  }
+}
+
