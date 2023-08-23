@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+    <body>
+        <div>
+            <h1>Can we go for a coffee date?</h1>
+            <button id="yesButton">Yes</button>
+            <button id="no">No</button>
+        </div>
+
+        <style>
+            html {
+              font-size: 30px;
+            }
+            
+            div{
+                text-align: center;
+                vertical-align: middle;
+            }
+            
+            button {
+              font-size: 2rem;
+            }
+            
+            
+            #no{
+                position: absolute;
+            }
+        </style>
+        <script>
+            document.getElementById("yesButton").addEventListener("click", function(){
+                alert("Ayieeeeh!!!")
+                alert("See you later!")
+            });
+                var b = document.getElementById("no")
+                b.addEventListener("click",change);
+                function change() {
+                    var i = Math.floor(Math.random()*500)+1;
+                    var j = Math.floor(Math.random()*500)+1;
+                    b.style.left = i+"px";
+                    b.style.top = j+"px";
+                }
+        </script>
+    </body>
+</html>
